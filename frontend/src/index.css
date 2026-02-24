@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '@fontsource/manrope';
+@import '@fontsource/inter';
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #F9F8F6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Manrope', sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+@layer base {
+  :root {
+    --background: 40 20% 98%;
+    --foreground: 24 10% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 24 10% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 24 10% 10%;
+    --primary: 24 10% 10%;
+    --primary-foreground: 40 20% 98%;
+    --secondary: 30 6% 90%;
+    --secondary-foreground: 24 10% 10%;
+    --muted: 30 6% 90%;
+    --muted-foreground: 24 5% 40%;
+    --accent: 38 92% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 346 77% 40%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 30 8% 88%;
+    --input: 30 8% 88%;
+    --ring: 24 10% 10%;
+    --chart-1: 142 64% 24%;
+    --chart-2: 38 92% 50%;
+    --chart-3: 346 77% 40%;
+    --chart-4: 174 61% 27%;
+    --chart-5: 24 5% 35%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer base {
+  [data-debug-wrapper="true"] {
+    display: contents !important;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F5F5F4;
+}
+::-webkit-scrollbar-thumb {
+  background: #A8A29E;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #78716C;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.4s ease-out forwards;
+}
+
+.stagger-1 { animation-delay: 0.05s; }
+.stagger-2 { animation-delay: 0.1s; }
+.stagger-3 { animation-delay: 0.15s; }
+.stagger-4 { animation-delay: 0.2s; }
+.stagger-5 { animation-delay: 0.25s; }
+.stagger-6 { animation-delay: 0.3s; }

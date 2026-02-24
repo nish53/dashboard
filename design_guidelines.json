@@ -1,0 +1,140 @@
+{
+  "identity": {
+    "name": "E1 - The Digital Carpenter",
+    "persona": "A master craftsman who builds digital tools with the precision of fine joinery. Rejects sterile corporate aesthetics for warm, tactile, and structured designs.",
+    "principles": [
+      "Structure is Beauty: Like a well-made cabinet, the grid is visible and celebrated.",
+      "Material Honesty: Use colors that feel physical (wood, stone, clay, forest).",
+      "Function First: Data is the wood; the dashboard is the lathe. Keep it sharp.",
+      "No Purple/Violet: Strictly forbidden."
+    ]
+  },
+  "typography": {
+    "fonts": {
+      "heading": "Manrope",
+      "body": "Inter"
+    },
+    "scale": {
+      "h1": "text-4xl font-bold tracking-tight text-stone-900",
+      "h2": "text-2xl font-semibold tracking-tight text-stone-900",
+      "h3": "text-xl font-medium text-stone-800",
+      "body": "text-sm text-stone-600 leading-relaxed",
+      "label": "text-xs font-semibold uppercase tracking-wider text-stone-500"
+    },
+    "imports": [
+      "@fontsource/manrope",
+      "@fontsource/inter"
+    ]
+  },
+  "colors": {
+    "palette": {
+      "background": {
+        "default": "bg-[#F9F8F6]", 
+        "paper": "bg-white",
+        "sidebar": "bg-[#1C1917]" 
+      },
+      "text": {
+        "primary": "text-[#1C1917]", 
+        "secondary": "text-[#57534E]", 
+        "inverse": "text-[#F5F5F4]" 
+      },
+      "brand": {
+        "primary": "bg-[#1C1917]", 
+        "accent": "bg-[#D97706]" 
+      },
+      "status": {
+        "success": "#15803D", 
+        "warning": "#B45309", 
+        "error": "#BE123C", 
+        "info": "#0F766E", 
+        "neutral": "#57534E" 
+      },
+      "charts": {
+        "delivered": "#15803D",
+        "transit": "#D97706",
+        "delayed": "#BE123C",
+        "pending": "#57534E",
+        "revenue": "#1C1917"
+      }
+    },
+    "rules": [
+      "Do NOT use pure black (#000000). Use #1C1917 (Warm Black).",
+      "Do NOT use pure white (#FFFFFF) for the main background. Use #F9F8F6 (Bone).",
+      "Cards must be White (#FFFFFF) to pop against the Bone background.",
+      "NO GRADIENTS. Use solid, flat colors."
+    ]
+  },
+  "layout": {
+    "grid_system": "Bento Grid Mode B (High Density)",
+    "container": "max-w-[1600px] mx-auto p-6",
+    "spacing": {
+      "section_gap": "gap-6",
+      "card_padding": "p-6",
+      "internal_gap": "gap-4"
+    },
+    "radius": {
+      "default": "rounded-lg",
+      "card": "rounded-xl"
+    },
+    "shadows": {
+      "card": "shadow-[0_1px_3px_rgba(0,0,0,0.1),0_1px_2px_rgba(0,0,0,0.06)]",
+      "hover": "shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06)]"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#1C1917] text-white hover:bg-[#292524] rounded-md px-4 py-2 text-sm font-medium transition-colors",
+      "secondary": "bg-white text-[#1C1917] border border-[#E7E5E4] hover:bg-[#F5F5F4] rounded-md px-4 py-2 text-sm font-medium transition-colors",
+      "danger": "bg-[#BE123C] text-white hover:bg-[#9F1239] rounded-md px-4 py-2 text-sm font-medium transition-colors"
+    },
+    "cards": {
+      "base": "bg-white border border-[#E7E5E4] rounded-xl shadow-sm p-6 flex flex-col justify-between"
+    },
+    "inputs": {
+      "base": "flex h-10 w-full rounded-md border border-[#E7E5E4] bg-white px-3 py-2 text-sm ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-[#A8A29E] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1C1917] focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+    },
+    "charts": {
+      "library": "recharts",
+      "style": "Minimalist, no grid lines (or very subtle), clear tooltips.",
+      "pie_radius": [60, 80],
+      "bar_radius": [4, 4, 0, 0]
+    }
+  },
+  "assets": {
+    "images": [
+      {
+        "url": "https://images.pexels.com/photos/15016524/pexels-photo-15016524.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Furniture Workshop - Employees Crafting. Use for Login Page Split Screen.",
+        "category": "auth_background"
+      }
+    ],
+    "icons": {
+      "library": "lucide-react",
+      "style": "Stroke width 1.5px, size 16px or 20px."
+    }
+  },
+  "motion": {
+    "hover": "transition-all duration-200 ease-in-out",
+    "page_load": "animate-in fade-in zoom-in-95 duration-300",
+    "micro_interactions": "active:scale-95"
+  },
+  "universal_guidelines": [
+    "Always use 'Manrope' for Headings and 'Inter' for Body.",
+    "Ensure high contrast for data numbers. They are the hero.",
+    "Use 'Tanstack Table' for the data view with sort/filter.",
+    "Authentication is JWT based. Store token securely.",
+    "CSV Upload must show a preview or success stats before confirming.",
+    "Dashboard must be responsive. Stack columns on mobile.",
+    "Avoid generic 'blue' for links/buttons. Use the Brand Black (#1C1917) or Accent Amber (#D97706)."
+  ],
+  "instructions_to_main_agent": [
+    "1. Setup Shadcn UI with the custom colors defined above.",
+    "2. Install 'recharts' for the dashboard.",
+    "3. Create the Layout component with a Sidebar and Topbar.",
+    "4. Build the Login page using the provided image.",
+    "5. Implement the Dashboard with the Bento Grid layout.",
+    "6. Ensure all charts use the specific color palette provided.",
+    "7. Mock the backend calls first to get the UI right, then integrate FastAPI.",
+    "8. Use 'data-testid' for all interactive elements."
+  ]
+}
